@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- [Meta tags sama seperti sebelumnya] -->
+    
+    <!-- Tambahkan Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* [Style sebelumnya tetap sama] */
+        .background {
+        background-image: url('banjir.jpeg');
+        background-size: cover; /* Gambar akan mencakup seluruh area */
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw; /* Lebar penuh layar (viewport width) */
+        height: 100vh; /* Tinggi penuh layar (viewport height) */
+        overflow: hidden; /* Hindari scroll jika konten melebihi viewport */
+        }
+
+        
+        .navbar {
+            background-color: #333;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Style untuk ikon */
+        .navbar-brand i {
+            margin-right: 10px;
+            color: #f39c12;
+        }
+
+        .nav-link i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgb(240, 236, 236) !important;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #f39c12;
+            color: white !important;
+            border-radius: 5px;
+        }
+
+        .nav-item.active .nav-link {
+            background-color: #f39c12;
+            color: white !important;
+        }
+        
+        /* Style untuk welcome container */
+        .welcome-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .welcome-container h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .welcome-container p {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+            padding: 10px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar dengan ikon -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <i class="fas fa-water"></i>Prediksi Banjir
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">
+                            <i class="fas fa-home"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-chart-line"></i>Predksi
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kelompok.html">
+                            <i class="fas fa-users"></i>About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- [Section background dan footer tetap sama] -->
+    <section class="background">
+        <div class="container text-center">
+            <div class="welcome-container">
+                <h1 class="text-white mb-4">Selamat Datang di Aplikasi Prediksi Banjir</h1>
+                <p class="lead text-white mb-4">Gunakan aplikasi ini untuk memprediksi risiko banjir berdasarkan data curah hujan dan debit sungai.</p>
+                <a href="index.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-chart-line me-2"></i>Mulai Prediksi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3 mt-5">
+        <p>&copy; 2024 Prediksi Banjir | Dibuat oleh Kelompok 2</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

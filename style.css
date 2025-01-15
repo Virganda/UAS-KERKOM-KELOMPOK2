@@ -1,0 +1,188 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('banjir.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* Mengatur warna tombol Hitung Risiko */
+#predictButton {
+    background-color: #28a745; /* Warna hijau */
+    color: white; /* Warna teks */
+    border: none; /* Menghapus border */
+}
+
+#predictButton:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Mengatur warna tombol Reset */
+#resetButton {
+    background-color: #dc3545; /* Warna merah */
+    color: white; /* Warna teks */
+    border: none; /* Menghapus border */
+}
+
+#resetButton:hover {
+    background-color: #c82333; /* Warna merah lebih gelap saat hover */
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 16px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #160d0d;
+    opacity: 0;
+    transform: scale(0.91);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.result.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Styling for the flood risk levels */
+/* Styling untuk high-risk (risiko tinggi) */
+.high-risk {
+    background-color: #e74c3c; /* Merah - Risiko tinggi */
+    color: white;  /* Warna teks putih */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.5);
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Styling untuk medium-risk (risiko sedang) */
+  .medium-risk {
+    background-color: #f39c12; /* Oranye - Risiko sedang */
+    color: white;  /* Warna teks putih */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Styling untuk low-risk (risiko rendah) */
+  .low-risk {
+    background-color: #2ecc71; /* Hijau - Risiko rendah */
+    color: white;  /* Warna teks putih */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(46, 204, 113, 0.5);
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efek transisi untuk elemen yang menerima kelas */
+  .high-risk:hover, .medium-risk:hover, .low-risk:hover {
+    transform: scale(1.05); /* Memperbesar sedikit saat di-hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Menambah bayangan */
+  }
+  
+
+/* Button styling */
+button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px;
+    background-color: #fbfeff;
+    color: #333; /* Ubah warna teks button menjadi gelap agar terlihat */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f57118;
+    transform: scale(1.05);
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #01111b;
+    outline: none;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style untuk ikon */
+.navbar-brand i {
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+.nav-link i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(240, 236, 236) !important;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #f39c12;
+    color: white !important;
+    border-radius: 5px;
+}
+
+.nav-item.active .nav-link {
+    background-color: #f39c12;
+    color: white !important;
+}
+     
